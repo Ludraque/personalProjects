@@ -1,0 +1,174 @@
+@media (max-width: 1380px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        height: 15vh;
+        background-color: rgb(207, 171, 0);
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 20;
+    }
+
+    .logo {
+        height: 10vh;
+        width: auto;
+        transform: translateY(10%) translateX(25%);
+    }
+
+    .logo img {
+        height: inherit;
+        width: auto;
+    }
+
+    .menu-burger {
+        z-index: 20;
+        position: absolute;
+        right: 5vw;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-burger span {
+        background-color: black;
+        height: 3px;
+        width: 100%;
+        display: flex;
+        opacity: 1;
+        position: relative;
+        left: 0;
+        transform-origin: 0 50%;
+        transform: rotate(0) scale(1);
+        transition: all linear 0.4s;
+    }
+
+    .menu-burger:hover span:nth-child(1) {
+        left: 7px;
+        transform: rotate(45deg) scale(0.99);
+    }
+
+    .menu-burger:hover span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-burger:hover span:nth-child(3) {
+        left: 7px;
+        transform: rotate(-45deg) scale(0.99);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .wall {
+        height: 85vh;
+        background-image: url("../medias/images/mobileWPHades.jpg");
+        background-size: 100vw 85vh;
+        background-repeat: no-repeat;
+    }
+
+    .titre {
+        width: 100%;
+        height: 15vh;
+        background-color: rgb(21, 11, 9);
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Hades;
+        font-size: 5vh;
+    }
+
+    article {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+
+    .description {
+        height: 15%;
+        display: flex;
+        align-items: center;
+    }
+
+    .description h3 {
+        font-family: Hades;
+        font-size: 5em;
+        padding: 60px 0;
+    }
+
+    .description p {
+        display: none;
+    }
+
+    #zagreus {
+        background-color: rgb(102, 26, 26);
+        color: rgb(207, 171, 0);
+    }
+
+    #hades {
+        background-color: rgb(254, 207, 7);
+        color: rgb(102, 26, 26);
+    }
+
+    #thanatos {
+        background-color: rgb(54, 58, 57);
+        color: rgb(194, 119, 204);
+    }
+
+    #megaera {
+        background-color: rgb(47, 85, 182);
+        color: white;
+    }
+
+    #megaera img {
+        display: none;
+    }
+
+    #megaera .description {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 75%;
+        justify-content: space-around;
+    }
+
+    #megaera .description p{
+        display: block;
+        font-size: 4em;
+    }
+
+    .titre:nth-of-type(2) {
+        display: none;
+    }
+
+    .olympiens {
+        display: none;
+    }
+
+    @font-face {
+        font-family: "Hades";
+        src: url("../font/HADES.otf");
+    }
+}
