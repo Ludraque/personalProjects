@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Arial";
+  cursor: pointer;
+
+  #infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    span {
+      display: inline-block;
+      color: white;
+      padding: 5px 25px;
+      font-size: 2rem;
+    }
+  }
+
+  canvas {
+    background: black;
+    display: block;
+    margin: 0 auto;
+    cursor: none;
+  }
+
+  #menu {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    border: solid red 1px;
+    width: 50vw;
+    height: 40vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      width: 50%;
+      height: 50px;
+      background-color: white;
+      font-size: 25px;
+      border: solid red 1px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #play {
+      transform: translate(-50%, -150%);
+    }
+
+    #highscore {
+      transform: translate(-50%, 50%);
+    }
+  }
+}
