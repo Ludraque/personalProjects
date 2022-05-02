@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.parent {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.main-div {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+audio {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background-image: url("../img/montagne.jpeg");
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+    background-image: url("../img/australia.jpeg");
+}
+
+.div3 {
+    grid-area: 1 / 2 / 3 / 3;
+    background-image: url("../img/zoo.jpeg");
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div4 {
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url("../img/savane.jpg");
+}
+
+.div5 {
+    grid-area: 2 / 3 / 3 / 4;
+    background-image: url("../img/savaneNuit.webp");
+}
+
+.sub-div {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#Ours { grid-area: 1 / 1 / 2 / 2; }
+#Lion { grid-area: 1 / 2 / 2 / 3; }
+#reset { grid-area: 2 / 1 / 3 / 3; }
+#Koala { grid-area: 3 / 1 / 4 / 2; }
+#Girafe { grid-area: 3 / 2 / 4 / 3; }
+
+.sub-div img, .sub-div button {
+    height: 100%;
+    width: 100%;
+}
+
+.sub-div button {
+    background-color: initial;
+    border: none;
+    font-size: 3rem;
+}
