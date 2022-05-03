@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Loto</title>
+</head>
+
+<body>
+    <main>
+
+        <form action="">
+            <legend>
+                <h2>Rentrez votre tirage!</h2>
+                <p><em>Nombres compris entre 0 et 49</em></p>
+            </legend>
+            <div>
+                <label for="chiffre1">1er nombre</label>
+                <input id="chiffre1" min="0" max="49" name="chiffre1" type="number">
+            </div>
+            <div>
+                <label for="chiffre2">2eme nombre</label>
+                <input id="chiffre2" min="0" max="49" name="chiffre2" type="number">
+            </div>
+            <div>
+                <label for="chiffre3">3eme nombre</label>
+                <input id="chiffre3" min="0" max="49" name="chiffre2" type="number">
+            </div>
+            <div>
+                <label for="chiffre4">4eme nombre</label>
+                <input id="chiffre4" min="0" max="49" name="chiffre2" type="number">
+            </div>
+            <div>
+                <label for="chiffre5">5eme nombre</label>
+                <input id="chiffre5" min="0" max="49" name="chiffre1" type="number">
+            </div>
+            <div>
+                <label for="chiffre6">Numéro étoile entre 0 et 9</label>
+                <input id="chiffre6" min="0" max="9" name="chiffreEtoile" type="number">
+            </div>
+            <div>
+                <button type="button" id="joue">Valider votre grille</button>
+                <button type="button" id="rejouer" disabled>Relancer</button>
+            </div>
+
+        </form>
+
+        <h1>
+            Tirage du <img src="img/logoLoto.png" alt="">
+        </h1>
+
+
+    </main>
+
+
+
+<script type="module" src="js/main.js"></script>
+</body>
+
+</html>

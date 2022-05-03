@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Light", sans-serif;
+    font-style: italic;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/wallpaper.jpeg");
+    background-size: cover;
+    color: black;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-right: 100px;
+    color: white;
+    background-color: rgba(150, 150, 150, 0.2);
+    box-shadow: 10px 7px 15px 1px white;
+    width: fit-content;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 50px;
+    padding: 30px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    background-color: initial;
+    border: none;
+    border-bottom: white 2px solid;
+    width: 40px;
+    color: white;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    text-shadow: 2px 0 10px white;
+}
+
+h1 img {
+    width: 20vw;
+}
+
+h3 {
+    text-shadow: 2px 0 10px white;
+}
+
+ul {
+    display: flex;
+    transform: translateX(5%);
+}
+
+li {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: scale(0.75) rotate(10deg);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    z-index: -5;
+}
+
+.wrong {
+    background-color: red;
+}
