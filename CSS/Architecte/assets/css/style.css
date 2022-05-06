@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Raleway, serif;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+:root {
+    --darken-color : rgba(0, 0, 0, 0.4);
+    --white-border : solid 1px white;
+    --title-size : 8vh;
+    --light-gray : hsla(0, 50%, 100%, 0.3);
+    --light-black : hsla(0, 0%, 0%, 0.5)
+}
+
+header {
+    z-index: 25;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    min-width: 300px;
+    height: 100vh;
+    background-color: var(--light-gray);
+    clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+header ul {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header ul li {
+    width: 200px;
+    height: 70px;
+    border: var(--white-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.5s;
+}
+
+header ul li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    transition: all linear 0.1s;
+}
+
+header ul li:hover {
+    background-color: var(--light-gray);
+}
+
+header ul li:hover a{
+    color: white;
+}
+
+section {
+    padding: 5vw;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: var(--darken-color);
+}
+
+#home {
+    background-image: url("../media/img/building.jpeg");
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#home h1 {
+    text-align: center;
+    height: 30vh;
+    width: 37vw;
+    border: var(--white-border);
+    padding: 40px 0;
+    color: white;
+    font-size: 10vh;
+    font-weight: bolder;
+}
+
+h1 span {
+    font-size: var(--title-size);
+    display: block;
+}
+
+#cities {
+    background-image: url("../media/img/building2.jpg");
+    perspective: 100rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cities h2 {
+    font-size: var(--title-size);
+    color: white;
+    align-self: flex-end;
+}
+
+.container {
+    height: 50vh;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 0.7fr 0.7fr 1.5fr;
+    gap: 10px 10px;
+    transform: rotateY(-45deg);
+}
+
+.sub-container {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform linear .4s;
+    position: relative;
+}
+
+.sub-container:hover {
+    background-color: var(--darken-color);
+    background-blend-mode: darken;
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem hsla(0, 0%, 100%, 0.8);
+}
+
+.sub-container::after {
+    width: fit-content;
+    display: block;
+    content: "";
+    opacity: 0;
+    position: relative;
+    font-size: 3em;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: all linear 0.2s;
+    text-align: center;
+}
+
+.sub-container:hover::after {
+    opacity: 1;
+    top: 50%;
+}
+
+#living {
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url("../media/img/building9.jpg");
+}
+
+#living::after {
+    content: "Living";
+}
+
+#work {
+    background-image: url("../media/img/building10.jpg");
+}
+
+#work::after {
+    content: "Work";
+}
+
+#sydney {
+    background-image: url("../media/img/building6.jpg");
+}
+
+#sydney::after {
+    content: "Sydney";
+}
+
+#dubaï {
+    grid-area: 1 / 4 / 3 / 5;
+    background-image: url("../media/img/building8.jpg");
+}
+
+#dubaï::after {
+    content: "Dubaï";
+}
+
+#paris {
+    grid-area: 3 / 1 / 5 / 2;
+    background-image: url("../media/img/building7.jpg");
+}
+
+#paris::after {
+    content: "Paris";
+}
+
+#building-style {
+    grid-area: 2 / 2 / 5 / 4;
+    background-image: url("../media/img/building5.jpg");
+}
+
+#building-style::after {
+    content: "Building Style";
+}
+
+#new-york {
+    grid-area: 3 / 4 / 5 / 5;
+    background-image: url("../media/img/building11.jpg");
+}
+
+#new-york::after {
+    content: "New York";
+}
+
+#contact {
+    background-image: url("../media/img/building3.jpg");
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form {
+    height: 70vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+}
+
+form legend {
+    font-size: var(--title-size);
+    position: relative;
+    right: 50px;
+    font-weight: bolder;
+}
+
+form label {
+    font-size: 1.5em;
+}
+
+.names {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+label {
+    width: 45%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form > label {
+    width: 100%;
+}
+
+form > label:last-of-type {
+    height: 25vh;
+}
+
+input {
+    padding-left: 10px;
+    width: 100%;
+    height: 10vh;
+    font-size: 5vh;
+    font-weight: lighter;
+    color: white;
+    background-color: var(--light-black);
+    border: none;
+    border-bottom: var(--white-border);
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    outline-color: yellow;
+}
+
+#message {
+    padding-left: 10px;
+    width: 100%;
+    font-size: 5vh;
+    color: white;
+    background-color: var(--light-black);
+    border: none;
+    border-bottom: var(--white-border);
+    border-radius: 5px;
+    height: 20vh;
+}
+
+::placeholder {
+    font-size: 5vh;
+    font-weight: lighter;
+    color: white;
+}
+
+#social {
+    background-image: url("../media/img/building4.jpg");
+    background-blend-mode: screen;
+    background-color: hsl(14, 96%, 74%);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#social h4 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+#social ul {
+    display: flex;
+    align-items: flex-end;
+    width: 720px;
+    margin-top: 90px;
+}
+
+#social a {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+}
+
+#social li:nth-of-type(2) {
+    margin-left: auto;
+}
+
+#social li:nth-of-type(2) a{
+    background-image: url("../media/img/fbBlanc.png");
+    background-size: contain;
+
+}
+
+#social li:nth-of-type(3) a{
+    background-image: url("../media/img/twitter.png");
+    background-size: contain;
+    border-radius: 50%;
+}
+
+#social li:nth-of-type(4) a{
+    background-image: url("../media/img/insta.png");
+    background-size: contain;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../font/Raleway-VariableFont_wght.ttf");
+}
