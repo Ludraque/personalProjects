@@ -1,0 +1,8 @@
+#resultat {
+    display: none;
+}
+
+#citiesAreaByDepartement {
+    max-height: 50vh;
+    overflow-y: auto;
+}
