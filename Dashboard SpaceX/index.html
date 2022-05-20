@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetCarbon/SpaceX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./js/libs/6.14.1-dist/ol.css">
+</head>
+<body>
+
+<template id="per-year">
+    <div class="total-year">
+        <p class="name">Launches</p>
+        <div class="graph">
+            <span class="value-graph"></span>
+            <img src="img/rocket.png" alt="">
+        </div>
+        <p class="number">0</p>
+    </div>
+
+    <div class="total-success">
+        <p>Saved</p>
+        <div class="graph">
+            <span class="value-graph"></span>
+            <img src="img/rocket.png" alt="">
+        </div>
+        <p class="number"><span class="valeur-succes">0</span>%</p>
+    </div>
+
+    <div class="list-types">
+        <p>Rockets Types</p>
+        <ul class="types">
+
+        </ul>
+    </div>
+</template>
+
+<template id="core">
+    <li>
+        <span class="core-number"></span>
+        : <span class="attempt"></span>
+        / <span class="attempt-success"></span>
+        / <span class="landing-type"></span>
+        <span class="core-landpad"></span>
+    </li>
+</template>
+
+<header>
+    <img src="img/spacex-logo.png" alt="">
+    <h1>Dashboard</h1>
+    <img src="img/netcarbon-logo.png" alt="">
+</header>
+
+<div id="dashboard">
+    <h2>Launches</h2>
+    <section id="infos">
+
+        <div class="container">
+            <p>Please select a year:</p>
+            <div class="fa-select-wrapper">
+                <div class="fa-select" data-value="">
+                    - Year -
+                </div>
+                <ul class="fa-options">
+                </ul>
+            </div>
+        </div>
+
+        <div id="info-year">
+
+            <div class="total-year">
+                <p class="name">Launches</p>
+                <div class="graph">
+                    <span class="valeur-graph"></span>
+                    <img src="img/rocket.png" alt="">
+                </div>
+                <p class="number">0</p>
+            </div>
+
+            <div class="total-success">
+                <p>Saved</p>
+                <div class="graph">
+                    <span class="valeur-graph"></span>
+                    <img src="img/rocket.png" alt="">
+                </div>
+                <p class="number"><span class="valeur-succes">100</span>%</p>
+            </div>
+
+            <div class="list-types">
+                <p>Rockets Types</p>
+                <ul class="types">
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <h2>Launchpads and Landpads</h2>
+    <section id="map">
+        <div id="zooming" class="minimized">Click to see pads</div>
+    </section>
+    <h2>Launches details</h2>
+    <section id="infos-launches">
+        <div class="waiting-for">Please select a year and a model</div>
+        <ul id="list-launches">
+
+        </ul>
+    </section>
+    <h2>Video</h2>
+    <section id="details-launch">
+        <div class="waiting-for">Please select year, model and launch</div>
+        <div id="extend-wrapper">
+            <div id="extend">
+            </div>
+        </div>
+        <iframe src="" allowfullscreen></iframe>
+        <div id="infos-video">
+            <h3>Launch Informations</h3>
+            <ul id="deep-details">
+                <li>Launch location: <span id="launchpad-name"></span> / <span id="region"></span></li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="https://kit.fontawesome.com/9ede7ecd9a.js" crossorigin="anonymous"></script>
+<script type="module" src="./js/libs/6.14.1-dist/ol.js"></script>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
