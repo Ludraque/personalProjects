@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "name": "Apple",
+      "price": "1.49",
+      "type": "Fruit",
+      "brand": "N/A",
+      "id": 1
+    },
+    {
+      "name": "Cookies",
+      "price": "4.99",
+      "type": "Biscuit",
+      "brand": "Granola",
+      "id": 2
+    },
+    {
+      "name": "Banana",
+      "price": "1.99",
+      "type": "Fruit",
+      "brand": "N/A",
+      "id": 3
+    },
+    {
+      "name": "RedBull",
+      "price": "2.99",
+      "type": "Soft Drinks",
+      "brand": "RedBull",
+      "id": 4
+    },
+    {
+      "name": "Champagne",
+      "price": "15.99",
+      "type": "Alcohol",
+      "brand": "Veuve-Clicquot",
+      "id": 5
+    },
+    {
+      "name": "Madeleines",
+      "price": "3.99",
+      "type": "Biscuit",
+      "brand": "Granola",
+      "id": 6
+    },
+    {
+      "name": "Apericubes",
+      "price": "6.99",
+      "type": "Cheese",
+      "brand": "Ribambel",
+      "id": 7
+    }
+  ]
+}
